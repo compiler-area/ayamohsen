@@ -1,0 +1,155 @@
+<!--<?php include 'header.php' ?>-->
+
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/images/favicon.png" rel="icon">
+    <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Tullabi</title>
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="assets/css/libs/fontawesome/all.min.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="assets/css/libs/bootstrap/bootstrap.css">
+    <!--Hover-->
+    <link rel="stylesheet" href="assets/css/libs/hover/hover.css">
+    <!--animate-->
+    <link rel="stylesheet" href="assets/css/libs/wow/wow.css">
+    <!--owlcarousel-->
+    <link rel="stylesheet" href="assets/css/libs/owlcarousel/owl.carousel.css">
+    <!--fancybox-->
+    <link rel="stylesheet" href="assets/css/libs/fancybox/fancybox.css">
+    <!--swiper-->
+    <link rel="stylesheet" href="assets/css/libs/swiper/swiper.min.css">
+    <!--lightbox-->
+    <link rel="stylesheet" href="assets/css/libs/lightbox/lightbox.min.css">
+    <!--Main-->
+    <link rel="stylesheet" href="assets/css/libs/main/main.css">
+  </head>
+  <!-- inputs -->
+  <style>
+    input , textarea , .more-info{
+      text-align: right ; 
+    }
+  </style>
+  
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-b fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">اختر مسكنك</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html" data-target="header">الرئيسية<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html" data-target="work">معلومات عننا<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="comming_soon.html" data-target="services">خدمات اخري<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active"><a class="nav-link active2" href="contact_us.html" data-target="contact">تواصل معنا<span class="sr-only">(current)																								</span></a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+  
+  <section class="contact">
+    <div class="overley"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 mt-5">
+          <div class="contact-mf">
+            <div class="box-shadow-full" id="contact">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">ارسل الينا </h5>
+                  </div>
+                  <div>
+                    <form class="contactForm" action="contact_form.php" method="post" role="form">
+                      <div id="sendmessage">Your message has been sent. Thank you!</div>
+                      <div id="errormessage"></div>
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input required class="form-control" id="name" type="text" name="name" placeholder="اسمك" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input required class="form-control" id="email" type="email" name="email" placeholder="الايميل الخاص بك" data-rule="email" data-msg="Please enter a valid email">
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input required class="form-control" id="subject" type="text" name="subject" placeholder="عنوان الرسالة" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <textarea required class="form-control" name="message" data-rule="required" data-msg="Please write something for us" placeholder="الرسالة" rows="5"></textarea>
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <button class="btn btn-primary" type="submit">ارسال الرسالة</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">تواصل معنا</h5>
+                  </div>
+                  <div class="more-info">
+                    <p class="lead"> للتواصل في حالة حدوث مشكلة او لمعرفة تفاصيل اكثر </p>
+                    <ul class="list-unstyled">
+                      <li><i class="fas fa-map-marker-alt"></i>329 WASHINGTON ST BOSTON, MA 02108</li>
+                      <li><i class="fas fa-phone-alt"></i>(617) 557-0089</li>
+                      <li><i class="fas fa-envelope"></i>contact@example.com</li>
+                    </ul>
+                  </div>
+                  <div class="social"><span class="ico-circle"><i class="fab fa-facebook  fa-2x"></i></span><span class="ico-circle"><i class="fab fa-instagram fa-2x"></i></span><span class="ico-circle"><i class="fab fa-twitter fa-2x"></i></span><span class="ico-circle"><i class="fab fa-pinterest-p fa-2x"></i></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="preloader"></div>
+  
+<!--<?php include 'footer.php' ?>-->
+      
+  <!--Jquery-->
+  <script src="assets/js/libs/jquery/jquery.min.js"></script>
+  <!--Fontawesome-->
+  <script src="assets/js/libs/fontawesome/all.min.js"></script>
+  <!--bootstrap-->
+  <script src="assets/js/libs/bootstrap/bootstrap.min.js"></script>
+  <!--counterup-->
+  <script src="assets/js/libs/counterup/jquery.counterup.min.js"></script>
+  <!--waypoints-->
+  <script src="assets/js/libs/counterup/jquery.waypoints.min.js"></script>
+  <!--wow-->
+  <script src="assets/js/libs/wow/wow.min.js"></script>
+  <!--owlcarousel-->
+  <script src="assets/js/libs/owlcarousel/owl.carousel.min.js"></script>
+  <!--typed-->
+  <script src="assets/js/libs/type/typed.min.js"></script>
+  <!--swipper-->
+  <script src="assets/js/libs/swiper/swiper.min.js"></script>
+  <!--lightbox-->
+  <script src="assets/js/libs/lightbox/lightbox.min.js"></script>
+  <!--Main-->
+  <script src="assets/js/libs/main/script.js"></script>
+
+</body>
+</html>

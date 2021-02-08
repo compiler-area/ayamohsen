@@ -1,0 +1,239 @@
+<!--<?php include 'header.php' ?>-->
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/images/favicon.png" rel="icon">
+    <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Tullabi</title>
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="assets/css/libs/fontawesome/all.min.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="assets/css/libs/bootstrap/bootstrap.css">
+    <!--Hover-->
+    <link rel="stylesheet" href="assets/css/libs/hover/hover.css">
+    <!--animate-->
+    <link rel="stylesheet" href="assets/css/libs/wow/wow.css">
+    <!--owlcarousel-->
+    <link rel="stylesheet" href="assets/css/libs/owlcarousel/owl.carousel.css">
+    <!--fancybox-->
+    <link rel="stylesheet" href="assets/css/libs/fancybox/fancybox.css">
+    <!--swiper-->
+    <link rel="stylesheet" href="assets/css/libs/swiper/swiper.min.css">
+    <!--lightbox-->
+    <link rel="stylesheet" href="assets/css/libs/lightbox/lightbox.min.css">
+    <!--Main-->
+    <link rel="stylesheet" href="assets/css/libs/main/main.css">
+  </head>
+<style>
+
+.custom-select{
+  background: #fff url("https://cdn.iconscout.com/icon/free/png-512/keyboard-down-arrow-1780093-1518654.png") no-repeat right 0.50rem center/20px 25px !important;
+}
+</style>
+
+<body>
+  <nav class="navbar main-nav navbar-expand-lg navbar-dark bg-blacktrans navbar-b fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <!-- اختر مسكنك -->
+        <img src="assets/images/logo.png" style="width: 100px; border:none">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a class="nav-link active2" href="index.html" data-target="header">الرئيسية<span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-target="work">معلومات عننا<span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="comming_soon.html" data-target="services">خدمات اخري<span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="contact_us.html" data-target="contact">تواصل معنا<span class="sr-only">(current)																								</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="header">
+    <div class="overley"></div>
+    <div class="content w-75">
+
+      <form action="connect_all_rooms.php" method="post" >
+        <div class="input-group mb-3">
+          <select required name="gov" class="custom-select" id="inputGroupSelect01">
+            <option value="all" selected>المحافظة</option>
+<!--
+            <?php
+                $con = mysqli_connect('localhost','root','');
+                mysqli_select_db($con, 'students');
+                // $con = mysqli_connect('sql313.byetcluster.com','b15_26550539','01113284597aab');
+                // mysqli_select_db($con, 'b15_26550539_student');
+                $s = " select * from government ";
+                $result = mysqli_query($con , $s);
+
+                while($row = mysqli_fetch_assoc($result)) {
+            ?>
+
+            <option value='<?php echo $row['id_gov']; ?>'> <?php echo $row['name']; ?> </option>
+
+            <?php
+                }
+            ?>
+-->
+          </select>
+        </div>
+
+
+        <div class="input-group mb-3">
+          <select name="area" class="custom-select" id="inputGroupSelect03">
+            <option value="all" selected>المنطقة</option>
+<!--
+            <?php
+                $con = mysqli_connect('localhost','root','');
+                mysqli_select_db($con, 'students');
+                $s = " select * from government ";
+                $result_gov = mysqli_query($con , $s);
+
+                while($row_gov = mysqli_fetch_assoc($result_gov)) {
+            ?>
+
+            <optgroup class="optgroub" value='<?php echo $row_gov['id_gov']; ?>'> 
+              <?php
+                  $gover = $row_gov['id_gov'];
+                  $con = mysqli_connect('localhost','root','');
+                  mysqli_select_db($con, 'students');
+                  $s = " select * from area where gov_id = '$gover' ";
+                  $result_area = mysqli_query($con , $s);
+
+                  while($row_area = mysqli_fetch_assoc($result_area)) {
+              ?>
+
+              <option value='<?php echo $row_area['id_area']; ?>'> <?php echo $row_area['area_name']; ?> </option>
+
+              <?php
+                  }
+              ?>
+            </optgroup>
+
+            <?php
+                }
+            ?>
+-->
+            
+          </select>
+        </div>
+
+        
+        <div class="input-group mb-3">
+          <select required name="m_f" class="custom-select" id="inputGroupSelect02">
+            <option value="1">ذكر</option>
+            <option value="2">انثي</option>
+          </select>
+        </div>
+
+        <div class="input-group mb-3">
+          <select name="live" class="custom-select" id="inputGroupSelect04">
+            <option value="all" selected>نوع الوحدة السكنية</option>
+            <option value="apartment">شقة</option>
+            <option value="romm">غرفة</option>
+            <option value="beds">سرير</option>
+          </select>
+        </div>
+
+        <!-- <div class="input-group mb-3 text-center">
+          <label for="customRange1" class="text-white">from 0 to : <span class="range-val"></span> </label>
+          <input name="price" type="range" class="custom-range" min="0" max="200" id="customRange1">
+        </div> -->
+
+        <!-- <div class="input-group mb-3">
+          <input type="number" name="price" class="form-control" placeholder="اكبر سعر تريده"  min="100" max="500" aria-label="Username" aria-describedby="basic-addon1">
+        </div> -->
+
+<!--        <button type="submit" class="btn btn-outline-primary btn-lg btn-block text-white">اعرض الان</button>-->
+          <a  class="btn btn-outline-primary btn-lg btn-block text-white" href='all_rooms.html' > اعرض الان </a>
+      </form>
+
+    </div>
+  </section>
+
+  <footer style=" position: fixed; top: 94%; color: #fff; width:100%; text-align:center">
+    <p class="copy">copyrights &copy; <a class="text-muted" href="https://www.facebook.com/messages/t/108691070922226">compiler team</a></p> 
+ </footer>
+
+  <a class="back-to-top" href="#"><i class="fas fa-chevron-up"></i></a>
+  <div id="preloader"></div>    
+    
+
+<!--  <script src="assets/js/libs/chain/chain.js"></script>-->
+    
+    
+    
+    
+    <!--  <?php include 'footer.php' ?>-->
+
+  <!--Jquery-->
+  <script src="assets/js/libs/jquery/jquery.min.js"></script>
+  <!--Fontawesome-->
+  <script src="assets/js/libs/fontawesome/all.min.js"></script>
+  <!--bootstrap-->
+  <script src="assets/js/libs/bootstrap/bootstrap.min.js"></script>
+  <!--counterup-->
+  <script src="assets/js/libs/counterup/jquery.counterup.min.js"></script>
+  <!--waypoints-->
+  <script src="assets/js/libs/counterup/jquery.waypoints.min.js"></script>
+  <!--wow-->
+  <script src="assets/js/libs/wow/wow.min.js"></script>
+  <!--owlcarousel-->
+  <script src="assets/js/libs/owlcarousel/owl.carousel.min.js"></script>
+  <!--typed-->
+  <script src="assets/js/libs/type/typed.min.js"></script>
+  <!--swipper-->
+  <script src="assets/js/libs/swiper/swiper.min.js"></script>
+  <!--lightbox-->
+  <script src="assets/js/libs/lightbox/lightbox.min.js"></script>
+  <!--Main-->
+  <script src="assets/js/libs/main/script.js"></script>
+    
+  
+  <script>
+  
+   $('.range-val').text($('.custom-range').val());
+
+    if( window.innerHeight != $("header").height() ){
+      $(".header").height(window.innerHeight);
+    }
+
+    $(window).resize(function() {
+        $(".header").height(window.innerHeight);
+    });
+
+    $(".custom-range").on(
+      'input change',
+      function () {
+        $('.range-val').text($('.custom-range').val());
+      }
+    );
+
+      $('.navbar-toggler-icon').click(function(){$('nav.main-nav').toggleClass('bg-dark bg-blacktrans')});
+      
+    // $(document).ready(function (){
+    //   $('#inputGroupSelect03 .optgroub').css({"display":"none"});
+    //   $('#inputGroupSelect01').change(function () {
+    //     console.log($(this).val());
+    //     $v = $(this).val ;
+    //     $("#inputGroupSelect03").each(function() { 
+    //       // if ($(this).find('.optgroub['2']') == 2) {
+    //       //     // $(this).css({'visibility':'visible'});
+    //       //     console.log($(this).val());
+    //       // }
+    //       $('.optgroub').css({"display" : "block"});
+    //       console.log($('.optgroub[value=$v]'));
+    //     });
+    //   });
+    // })
+  </script>
+
+</body>
+</html>

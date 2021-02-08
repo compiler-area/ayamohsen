@@ -1,0 +1,1 @@
+{"version":3,"sources":["layouts/_header.scss","layouts/_footer.scss"],"names":[],"mappings":"AAAA;EAEI,qBAAoB,EAAA;;ACFxB;EAEI,qBAAoB,EAAA","file":"../sass/main.css","sourcesContent":[".header  \r\n{\r\n    background-color:red;\r\n}",".footer  \r\n{\r\n    background-color:red;\r\n}"]}
